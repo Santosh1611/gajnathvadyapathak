@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact-us.css">
+</head>
+
+<body>
+
+
+    <!-- ------------------------------Top navigation Starts-------------------------------------------- -->
+
+    <div class="navigation-bar">
+        <img src="gajnath-logo.png" alt="" width="140px" height="80px">
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">HOME</a>
+            <a href="#news">SOCIAL</a>
+            <div class="dropdown">
+                <button class="dropbtn">GALLERY
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="photos.html">PHOTOS</a>
+                    <a href="videos.html">VIDEOS</a>
+                    <a href="#">MEDIA</a>
+                </div>
+            </div>
+            <a href="#contact" class="active" style="color: white;">CONTACT</a>
+            <a href="about-us.html">ABOUT</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- -------------------------------Top navigation Ends---------------------------------------------- -->
+
+
+
+
+    <!-- -----------------------------------------Content Starts-------------------------------------------- -->
+
+    <div class="container">
+        <div style="text-align:center">
+            <p class="contact-us-heading">CONTACT US</p>
+            <!-- <p>Swing by for a cup of coffee, or leave us a message:</p> -->
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="2.JPG" style="width:100%">
+                <p class="address">Rajaram Bhiku Pathare Stadium, Kharadi, Pune - 411014<br><br>
+                    For Enquiry :- +919097766767, +919049048008</p>
+            </div>
+            <div class="column">
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <label for="fname">Full Name</label>
+                    <input type="text" id="fname" name="fullname" placeholder="Your Full Name..." required>
+
+                    <label for="birthdate">Birth Date</label>
+                    <input type="date" id="birthdate" name="birthdate" placeholder="DD-MM-YYYY">
+
+                    <label for="gender">Gender</label>
+                    <select required="" name="gender" placeholder="Select Gender">
+                        <option value="" disabled="" selected="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+
+                    </select>
+
+                    <label for="contact">Contact Number</label>
+                    <input type="number" id="contact" name="contact" placeholder="Your Contact Number..." required>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email...">
+
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="Your City..." required>
+
+                    <label for="instrument">Instrument</label>
+                    <select required="" name="instrument" placeholder="Select Instrument">
+                        <option value="" disabled="" selected="">Select Instrument</option>
+                        <option value="dhol">Dhol</option>
+                        <option value="tasha">Tasha</option>
+                        <option value="dhwaj">Dhwaj</option>
+                        <option value="Volunteer">Volunteer</option>
+                    </select>
+
+                    <!-- <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select> -->
+
+                    <!-- <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.."
+                        style="height:170px"></textarea> -->
+
+                    <input type="submit" value="Submit">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- -----------------------------------------Content Ends--------------------------------------------- -->
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+
+
+        // -------------------------------Top navigation Starts-----------------------------------------
+
+
+
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+
+        // ---------------------------------------Top navigation Ends------------------------------------
+
+
+        // -------------------------------------Content Starts--------------------------------------------
+
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "santoshghawate1611@gmail.com",
+                Password: "password",
+                To: 'santgh16@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "New Contact Form Enquiry",
+                Body: "And this is the body"
+            }).then(
+                message => alert(message)
+            );
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

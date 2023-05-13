@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Gajnath Vadya Pathak</title>
+	<!-- <meta http-equiv="content-type" content="text/html; charset=utf-8" /> -->
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="index.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+	<!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+ <!-- ------------------------------Top navigation Starts-------------------------------------------- -->
+
+ <div class="navigation-bar">
+    <img src="gajnath-logo.png" alt="" width="140px" height="80px">
+    <div class="topnav" id="myTopnav">
+        <a href="#" class="active" style="color: white;">HOME</a>
+        <a href="#news">SOCIAL</a>
+        <div class="dropdown">
+            <button class="dropbtn">GALLERY
+                <!-- <i class="fa fa-caret-down"></i> -->
+            </button>
+            <div class="dropdown-content">
+                <a href="photos.html">PHOTOS</a>
+                <a href="videos.html">VIDEOS</a>
+                <a href="#">MEDIA</a>
+            </div>
+        </div>
+        <a href="contact-us.html" >CONTACT</a>
+        <a href="about-us.html"  >ABOUT</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- -------------------------------Top navigation Ends---------------------------------------------- -->
+
+
+
+
+<!-- -----------------------------------------Content Starts-------------------------------------------- -->
+
+
+	<swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
+    slides-per-view="3" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+    coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
+    <swiper-slide>
+      <img src="1.JPG" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="2.JPG" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="3.JPG" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="5.JPG" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="6.JPG" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="7.jpg" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="8.JPG" />
+    </swiper-slide>
+  </swiper-container>
+
+
+
+<!-- --------------------------------Bottom Navigation Starts------------------------------------ -->
+
+
+	<footer>
+		<div class="policy-box">
+			<span>© GAJNATH <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script>. All rights reserved. </span> 
+			
+		</div>
+		<!-- footer social -->
+		<div class="footer-social">
+			<ul style="margin: 0;">
+				<a href="https://m.facebook.com/gajnathwadyapathak/" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://www.instagram.com/gajnath_wadya_pathak_pune/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a>
+				<a href="https://www.youtube.com/channel/UCFQK8Ee_dKiGkHwLBlvVGYw/videos?view=0&sort=p&shelf_id=0" target="_blank"><i class="fa fa-youtube"></i></a>
+				<!--<li><a href="#" target="_blank" ><i class="fa fa-tumblr"></i></a></li>-->
+			</ul>
+		</div>
+	
+	</footer>
+	
+	
+	
+	
+	
+	
+	
+	<!-- --------------------------------Bottom Navigation Ends----------------------------------------- -->
+	
+	
+	
+
+
+
+	<script>
+
+
+		// -------------------------------Top navigation Starts-----------------------------------------
+	
+	
+	
+			/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+	
+			
+	// ---------------------------------------Top navigation Ends----------------------------
+	var swiper = new Swiper(".mySwiper", {
+            // slidesPerView: 1,
+            spacebetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            speed: 1000,
+        });
+
+	
+	</script>
+	
+</body>
+
+</html>
